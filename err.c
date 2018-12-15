@@ -1,0 +1,99 @@
+/*
+ * A n t l r  S e t s / E r r o r  F i l e  H e a d e r
+ *
+ * Generated from: lego.g
+ *
+ * Terence Parr, Russell Quong, Will Cohen, and Hank Dietz: 1989-2001
+ * Parr Research Corporation
+ * with Purdue University Electrical Engineering
+ * With AHPCRC, University of Minnesota
+ * ANTLR Version 1.33MR33
+ */
+
+#define ANTLR_VERSION	13333
+#include "pcctscfg.h"
+#include "pccts_stdio.h"
+
+#include <string>
+#include <iostream>
+#include <map>
+#include <vector>
+using namespace std;
+
+// struct to store information about tokens
+typedef struct {
+  string kind;
+  string text;
+} Attrib;
+
+// function to fill token information (predeclaration)
+void zzcr_attr(Attrib *attr, int type, char *text);
+
+// fields for AST nodes
+#define AST_FIELDS string kind; string text;
+#include "ast.h"
+
+// macro to create a new AST node (and function predeclaration)
+#define zzcr_ast(as,attr,ttype,textt) as=createASTnode(attr,ttype,textt)
+AST* createASTnode(Attrib* attr,int ttype, char *textt);
+#define zzSET_SIZE 4
+#include "antlr.h"
+#include "ast.h"
+#include "tokens.h"
+#include "dlgdef.h"
+#include "err.h"
+
+ANTLRChar *zztokens[29]={
+	/* 00 */	"Invalid",
+	/* 01 */	"@",
+	/* 02 */	"NUM",
+	/* 03 */	"GRID",
+	/* 04 */	"PUSH",
+	/* 05 */	"ASSIG",
+	/* 06 */	"MOVE",
+	/* 07 */	"PLACE",
+	/* 08 */	"AT",
+	/* 09 */	"POP",
+	/* 10 */	"HEIGHT",
+	/* 11 */	"DEF",
+	/* 12 */	"ENDEF",
+	/* 13 */	"LPAR",
+	/* 14 */	"RPAR",
+	/* 15 */	"MAJOR",
+	/* 16 */	"MENOR",
+	/* 17 */	"WHILE",
+	/* 18 */	"AND",
+	/* 19 */	"EAST",
+	/* 20 */	"WEST",
+	/* 21 */	"NORTH",
+	/* 22 */	"SOUTH",
+	/* 23 */	"FITS",
+	/* 24 */	"LCLAU",
+	/* 25 */	"RCLAU",
+	/* 26 */	"COMA",
+	/* 27 */	"ID",
+	/* 28 */	"SPACE"
+};
+SetWordType zzerr1[4] = {0x62,0x1c,0x2,0xa};
+SetWordType zzerr2[4] = {0x40,0x4,0x2,0x8};
+SetWordType zzerr3[4] = {0x80,0x20,0x0,0x8};
+SetWordType setwd1[29] = {0x0,0x7b,0x0,0x0,0x0,0x0,0x66,
+	0x0,0x0,0x0,0x66,0x6a,0x68,0x80,0x0,
+	0x0,0x0,0x66,0x0,0x0,0x0,0x0,0x0,
+	0x0,0x0,0x68,0x0,0xe6,0x0};
+SetWordType zzerr4[4] = {0x10,0x2,0x0,0x0};
+SetWordType zzerr5[4] = {0x52,0x1e,0x2,0xa};
+SetWordType zzerr6[4] = {0x0,0x0,0x78,0x0};
+SetWordType zzerr7[4] = {0x0,0x20,0x0,0x8};
+SetWordType setwd2[29] = {0x0,0xbf,0x0,0x0,0xc0,0x0,0xbf,
+	0x0,0x80,0xc0,0xbf,0xbf,0xbf,0x0,0x2,
+	0x2,0x2,0xbf,0x2,0x0,0x0,0x0,0x0,
+	0x0,0x0,0xbf,0x2,0xbf,0x0};
+SetWordType zzerr8[4] = {0x0,0x40,0x4,0x0};
+SetWordType zzerr9[4] = {0x0,0x80,0x1,0x0};
+SetWordType zzerr10[4] = {0x4,0x4,0x80,0x0};
+SetWordType zzerr11[4] = {0x4,0x4,0x0,0x0};
+SetWordType setwd3[29] = {0x0,0x81,0x24,0x0,0x0,0x0,0x1,
+	0x0,0x0,0x0,0x5,0x81,0x1,0x0,0x5a,
+	0x40,0x40,0x1,0x58,0x0,0x0,0x0,0x0,
+	0x0,0x0,0x1,0x40,0x1,0x0};
